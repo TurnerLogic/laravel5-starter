@@ -8,6 +8,16 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
+	/**
+     * Create a new authentication controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a user's dashboard
      *

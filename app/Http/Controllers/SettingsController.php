@@ -15,6 +15,16 @@ use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 class SettingsController extends Controller
 {
     /**
+     * Create a new authentication controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a authenticated user's settings.
      *
      * @return \Illuminate\Http\Response
